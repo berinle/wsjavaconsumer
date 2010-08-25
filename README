@@ -1,5 +1,3 @@
 This is a sample of a java consumer of a web service exposed via soap endpoint.
 
-A custom jaxb binding file (src/sample.xjb) was used when generating the consumer to allow
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Celiminate
-JaxBElement<> element generations for some elements.
+A custom jaxb binding file (src/sample.xjb) was used when generating the consumer to eliminate JaxBElement<> element generations for some elements.
