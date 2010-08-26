@@ -1,0 +1,37 @@
+apply plugin: 'java'
+	
+//baseName = 'wrv-websvc-util'
+archivesBaseName = 'wrv-websvc-util'
+
+sourceCompatibility = 1.5
+version = '1.0'
+	
+repositories {
+	mavenCentral()
+	flatDir(name: 'biddingLib', dirs: "c:/bea9.2/user_projects/domains/AuctionDomain/biddingcfmx/biddingcfmxapp/WEB-INF/lib")
+	flatDir(name: 'biddingEclipseLib', dirs: "d:/gitrepos/isas/lib")
+}
+
+dependencies {
+	compile 'javax.xml.ws:jaxws-api:2.1'
+}
+
+task customJar(type: Jar, dependsOn: classes) {
+	from "build/classes/main"
+	exclude "driver"
+}
+
+uploadArchives {
+	repositories {
+		add project.repositories.biddingLib
+		add project.repositories.biddingEclipseLib
+	}
+}
+
+/*task upload (type:Upload, dependsOn: customJar) {
+	artifacts = 'build/lib/wrv-websvc-util-1.0.jar'
+	repositories {
+		add project.repositories.biddingLib
+		add project.repositories.biddingEclipseLib
+	}
+}*/
